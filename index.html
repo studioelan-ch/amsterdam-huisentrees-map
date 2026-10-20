@@ -27,13 +27,14 @@
     .maplibregl-ctrl-attrib a {color:#666!important;}
     .maplibregl-canvas {cursor:grab;}
     .maplibregl-canvas:active {cursor:grabbing;}
-    #close-info {appearance:none;border:none;background:transparent;color:#111;width:32px;height:32px;font-size:24px;cursor:pointer;display:grid;place-items:center;position:absolute;right:10px;top:10px;}
-    #info {position:absolute;z-index:4;top:24px;left:24px;width:290px;max-width:calc(100% - 96px);background:rgba(255,255,255,.97);border:1px solid var(--hair);padding:22px;box-shadow:0 3px 22px rgba(0,0,0,.06);display:none;}
+    #close-info {appearance:none;border:none;background:rgba(255,255,255,.94);color:#111;width:32px;height:32px;font-size:24px;cursor:pointer;display:grid;place-items:center;position:absolute;z-index:5;right:10px;top:10px;border-radius:50%;}
+    #info {position:absolute;z-index:4;top:24px;left:24px;width:330px;max-width:calc(100% - 96px);background:rgba(255,255,255,.98);border:1px solid var(--hair);padding:0;box-shadow:0 3px 22px rgba(0,0,0,.06);display:none;}
     #info.open {display:block;}
-    .eyebrow {text-transform:uppercase;letter-spacing:.14em;font-size:9px;font-weight:700;color:#777;margin:0 0 16px;}
+    #info-body {padding:17px 18px 18px;}
     #info-title {font-size:20px;line-height:1.2;font-weight:500;margin:0 22px 6px 0;overflow-wrap:anywhere;}
     .typology {font-size:12px;line-height:1.5;color:#6e6e6e;margin:0;}
-    #photo {display:none;width:100%;height:170px;object-fit:cover;margin:17px 0 0;background:#eee;}
+    #photo {display:none;width:100%;aspect-ratio:4/3;max-height:320px;object-fit:contain;margin:0;background:#f2f2f2;}
+    .credits {font-size:10px;line-height:1.4;color:#777;margin:14px 0 0;}
     #photo.visible {display:block;}
     #reset {position:absolute;z-index:3;bottom:32px;left:24px;appearance:none;border:1px solid #d7d7d7;background:rgba(255,255,255,.96);width:38px;height:38px;display:grid;place-items:center;cursor:pointer;}
     #reset svg {width:17px;height:17px;stroke:#111;fill:none;stroke-width:1.7;}
@@ -43,9 +44,9 @@
     #position-count {font-size:11px;color:#777;}
     #reset:hover, #close-info:hover, #multiple button:hover {background:#f2f2f2;}
     @media(max-width:640px) {
-      #info {top:auto;bottom:40px;left:12px;max-width:calc(100% - 24px);width:calc(100% - 24px);padding:18px;}
+      #info {top:auto;bottom:42px;left:12px;max-width:calc(100% - 24px);width:calc(100% - 24px);padding:0;}
       #info-title {font-size:17px;}
-      #photo {height:120px;}
+      #photo {max-height:34vh;}
       #reset {left:12px;bottom:12px;}
       .maplibregl-ctrl-top-right {top:12px;right:12px;}
     }
@@ -58,15 +59,17 @@
   <div id="error" role="alert"><div><strong>Die Karte konnte nicht geladen werden.</strong>Bitte Internetverbindung und Zugriff auf die Kartendienste prüfen.</div></div>
   <aside id="info" aria-label="Informationen zum gewählten Hauseingang">
     <button type="button" id="close-info" aria-label="Informationen schliessen">×</button>
-    <p class="eyebrow">AMSTERDAMSE HUISENTREES</p>
-    <h2 id="info-title"></h2>
-    <p id="info-type" class="typology"></p>
-    <div id="multiple" aria-label="Mehrere Eingänge an dieser Position">
-      <button type="button" id="prev-entry" aria-label="Vorheriger Eingang">←</button>
-      <span id="position-count"></span>
-      <button type="button" id="next-entry" aria-label="Nächster Eingang">→</button>
-    </div>
     <img id="photo" alt="Fotografie des gewählten Hauseingangs" loading="lazy" referrerpolicy="no-referrer" />
+    <div id="info-body">
+      <h2 id="info-title"></h2>
+      <p id="info-type" class="typology"></p>
+      <p class="credits">Fotografie: studio elan</p>
+      <div id="multiple" aria-label="Mehrere Eingänge an dieser Position">
+        <button type="button" id="prev-entry" aria-label="Vorheriger Eingang">←</button>
+        <span id="position-count"></span>
+        <button type="button" id="next-entry" aria-label="Nächster Eingang">→</button>
+      </div>
+    </div>
   </aside>
   <button type="button" id="reset" title="Zur Gesamtansicht" aria-label="Kartenansicht zurücksetzen">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9V4h5M21 15v5h-5M4.4 4.6a9 9 0 0 1 15 4.2M19.6 19.4a9 9 0 0 1-15-4.2"/></svg>
@@ -110,6 +113,9 @@
     const loading = document.getElementById('loading');
     let map;
     let currentId = null;
+    // Verwende stabile IDs statt gerundeter Kartenkoordinaten für Klicks.
+    // MapLibre liefert bei queryRenderedFeatures oft gerundete Point-Koordinaten zurück.
+    const byId = new Map(geojson.features.map(f => [Number(f.id), f]));
     const byCoord = new Map();
     for (const f of geojson.features) {
       const key = f.geometry.coordinates.join(',');
@@ -161,12 +167,22 @@
             'circle-stroke-width':1.1
           }
         });
+        // Unsichtbare, grössere Klickflächen: Punkte bleiben visuell klein.
+        map.addLayer({
+          id:'marker-hitareas', type:'circle', source:'entrances',
+          paint:{
+            'circle-color':'#111111',
+            'circle-radius':['interpolate',['linear'],['zoom'],11,10,14,12,18,15],
+            'circle-opacity':0.001,
+            'circle-stroke-width':0
+          }
+        });
         fitAll(false);
         loading.classList.add('hidden');
         setTimeout(()=>loading.remove(),600);
       });
       map.on('error',e=>{console.warn('MapLibre / Tile error:',e.error||e);});
-      map.on('mousemove','markers',e=>{
+      map.on('mousemove','marker-hitareas',e=>{
         map.getCanvas().style.cursor='pointer';
         const next=e.features?.[0]?.id;
         if(hoverId===next)return;
@@ -174,24 +190,29 @@
         hoverId=next;
         if(hoverId!==undefined)map.setFeatureState({source:'entrances',id:hoverId},{hover:true});
       });
-      map.on('mouseleave','markers',()=>{
+      map.on('mouseleave','marker-hitareas',()=>{
         map.getCanvas().style.cursor='grab';
         if(hoverId!==null&&hoverId!==undefined)map.setFeatureState({source:'entrances',id:hoverId},{hover:false});
         hoverId=null;
       });
-      map.on('click','markers',e=>{
-        const f=e.features?.[0];if(!f)return;
-        const group = byCoord.get(f.geometry.coordinates.join(',')) || [];
-        if(activeGroup.length && activeGroup[0]?.geometry.coordinates.join(',') === f.geometry.coordinates.join(',')){
-          groupIndex = (groupIndex + 1) % group.length;
+      map.on('click','marker-hitareas',e=>{
+        const rendered=e.features?.[0];
+        const clickedId=Number(rendered?.properties?.id ?? rendered?.id);
+        const original=byId.get(clickedId);
+        if(!original)return;
+        // Wichtig: Nur die Originaldaten enthalten die exakten Koordinaten.
+        const coordKey=original.geometry.coordinates.join(',');
+        const group=byCoord.get(coordKey)||[original];
+        if(activeGroup.length && activeGroup[0]?.geometry.coordinates.join(',')===coordKey){
+          groupIndex=(groupIndex+1)%group.length;
         } else {
-          groupIndex = 0;
+          groupIndex=0;
         }
-        activeGroup = group;
+        activeGroup=group;
         selectFeature(activeGroup[groupIndex]);
       });
       map.on('click',e=>{
-        if(map.queryRenderedFeatures(e.point,{layers:['markers']}).length===0)closeInfo();
+        if(map.queryRenderedFeatures(e.point,{layers:['marker-hitareas']}).length===0)closeInfo();
       });
     }
 
@@ -201,12 +222,13 @@
         duration:animated?650:0});
     }
     function selectFeature(feature) {
+      if(!feature)return;
       if(currentId!==null)map.setFeatureState({source:'entrances',id:currentId},{selected:false});
       currentId=feature.id;
       map.setFeatureState({source:'entrances',id:currentId},{selected:true});
       const props=feature.properties;
       document.getElementById('info-title').textContent=props.name||'Hauseingang';
-      document.getElementById('info-type').textContent='Typologie '+(props.type||'–');
+      document.getElementById('info-type').textContent=props.type||'–';
       const multiples=document.getElementById('multiple');
       multiples.classList.toggle('visible',activeGroup.length>1);
       document.getElementById('position-count').textContent=`${groupIndex+1} / ${activeGroup.length}`;
