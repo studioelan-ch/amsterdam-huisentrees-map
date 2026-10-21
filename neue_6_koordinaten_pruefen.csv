@@ -1,0 +1,7 @@
+﻿ID;Typ;Adresse;Postleitzahl;Longitude;Latitude;Fotodatei;Position_Status;Referenz
+347;B1;Sassenheimstraat 23;1059 BB;4.848416;52.347875;photos/entrance-0347.jpg;adressnah;Gebaeude GPS, Sassenheimstraat 23H
+348;B1;Isaac Titsinghkade 203;1018 LL;4.930565;52.37253;photos/entrance-0348.jpg;ungefaehr_pruefen;Interpolation zwischen Isaac Titsinghkade 175 und 225
+349;B4;Sloterkade 161T;1059 EB;4.851544;52.350101;photos/entrance-0349.jpg;adressnah;gleicher Gebaeudekomplex Sloterkade 161F
+350;C1;Marnixstraat 352;1016 XV;4.879539;52.366321;photos/entrance-0350.jpg;adressnah;gleicher Gebaeudekomplex Marnixstraat 352-3
+351;C4;Postjeskade 71B;1058 DH;4.85224;52.363155;photos/entrance-0351.jpg;ungefaehr_pruefen;Nachbaradresse Postjeskade 69B
+352;C3;Herengracht 355;1016 BA;4.887141;52.369122;photos/entrance-0352.jpg;adressnah;GPS Foto Wikicommons Haus Herengracht 355

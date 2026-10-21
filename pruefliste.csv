@@ -1,0 +1,353 @@
+﻿ID;Adresse;Typologie;Buchauswahl;Fotodatei;Foto_vorhanden;Koordinate_Lon;Koordinate_Lat;Koordinatenqualitaet;Koordinatenquelle
+1;Saenredamstraat 11;B1;Nein;photos/entrance-0001.jpg;Ja;4.8876296;52.355907;Bestand KMZ;Google My Maps
+2;Seranggracht 9;A1;Ja;photos/entrance-0002.jpg;Ja;4.9330463;52.3778215;Bestand KMZ;Google My Maps
+3;Weteringschans 225;C1;Ja;photos/entrance-0003.jpg;Ja;4.8946593;52.3595776;Bestand KMZ;Google My Maps
+4;Wittenburgergracht 201;A3;Nein;photos/entrance-0004.jpg;Ja;4.9197475;52.3696683;Bestand KMZ;Google My Maps
+5;Berkelstraat 23I;A4;Ja;photos/entrance-0005.jpg;Ja;4.9038802;52.3476026;Bestand KMZ;Google My Maps
+6;Herengracht 357;A4;Nein;photos/entrance-0006.jpg;Ja;4.8871832;52.369073;Bestand KMZ;Google My Maps
+7;Jacob Obrechtstraat 68;A4;Nein;photos/entrance-0007.jpg;Ja;4.8764383;52.3541363;Bestand KMZ;Google My Maps
+8;Gerrit van der Veenstraat 2I;A1;Nein;photos/entrance-0008.jpg;Ja;4.8813966;52.349373;Bestand KMZ;Google My Maps
+9;Buiten Kadijken 20;A1;Nein;photos/entrance-0009.jpg;Ja;4.9171128;52.3692382;Bestand KMZ;Google My Maps
+10;Seranggracht 9;A1;Ja;photos/entrance-0002.jpg;Ja;4.9330463;52.3778215;Bestand KMZ;Google My Maps
+11;Hacquartstraat 30;A1;Ja;photos/entrance-0011.jpg;Ja;4.873468;52.352861;Bestand KMZ;Google My Maps
+12;Banstraat 45;A1;Nein;photos/entrance-0012.jpg;Ja;4.8756384;52.3527306;Bestand KMZ;Google My Maps
+13;Jacob Obrechtplein 5;A1;Nein;photos/entrance-0013.jpg;Ja;4.8781513;52.3529466;Bestand KMZ;Google My Maps
+14;Laagte Kadijk 4;A1;Nein;photos/entrance-0014.jpg;Ja;4.9123149;52.3700256;Bestand KMZ;Google My Maps
+15;Sarphatipark 63;A1;Nein;photos/entrance-0015.jpg;Ja;4.896551;52.35524;Bestand KMZ;Google My Maps
+16;Sarphatipark 75;A1;Nein;photos/entrance-0016.jpg;Ja;4.8969099;52.3553672;Bestand KMZ;Google My Maps
+17;Sarphatipark 93;A1;Nein;photos/entrance-0017.jpg;Ja;4.8977722;52.3555353;Bestand KMZ;Google My Maps
+18;Sarphatipark 101;A1;Nein;photos/entrance-0018.jpg;Ja;4.898399;52.35541;Bestand KMZ;Google My Maps
+19;Weesperzijde 15o;A1;Nein;photos/entrance-0019.jpg;Ja;4.9065554;52.3581767;Bestand KMZ;Google My Maps
+20;Weesperzijde 17;A1;Nein;photos/entrance-0020.jpg;Ja;4.9067026;52.357773;Bestand KMZ;Google My Maps
+21;Witte de Withstraat 28;A1;Ja;photos/entrance-0021.jpg;Ja;4.859537;52.365848;Bestand KMZ;Google My Maps
+22;Ruysdaelkade 25;A1;Ja;photos/entrance-0022.jpg;Ja;4.88717;52.3587645;Bestand KMZ;Google My Maps
+23;Roemer Visscherstraat 46;A1;Ja;photos/entrance-0023.jpg;Ja;4.8759416;52.3612423;Bestand KMZ;Google My Maps
+24;Plantage Kerklaan 57;A1;Nein;photos/entrance-0024.jpg;Ja;4.9126811;52.3676669;Bestand KMZ;Google My Maps
+25;Jan van Galenstraat 207I;C1;Ja;photos/entrance-0025.jpg;Ja;4.8538486;52.3735998;Bestand KMZ;Google My Maps
+26;Weesperzijde 6;A1;Ja;photos/entrance-0026.jpg;Ja;4.9063338;52.3586078;Bestand KMZ;Google My Maps
+27;Gerard Doustraat 176;A1;Nein;photos/entrance-0027.jpg;Ja;4.8951576;52.3563067;Bestand KMZ;Google My Maps
+28;Tweede Jan Steenstraat 83;A1;Nein;photos/entrance-0028.jpg;Ja;4.9018993;52.3567149;Bestand KMZ;Google My Maps
+29;Sarphatipark 93;A1;Nein;photos/entrance-0017.jpg;Ja;4.8977722;52.3555353;Bestand KMZ;Google My Maps
+30;Hobbemakade 83O, 1071 x;A1;Nein;photos/entrance-0030.jpg;Ja;4.8859957;52.3527402;Bestand KMZ;Google My Maps
+31;Churchill-laan 242;A1;Nein;photos/entrance-0031.jpg;Ja;4.8903043;52.3475174;Bestand KMZ;Google My Maps
+32;Mesdagstraat 55;A1;Nein;photos/entrance-0032.jpg;Ja;4.89648;52.348418;Bestand KMZ;Google My Maps
+33;Ruysdaelkade 27;A1;Nein;photos/entrance-0033.jpg;Ja;4.887126;52.3586657;Bestand KMZ;Google My Maps
+34;Admiraal de Ruijterweg 66;A1;Nein;photos/entrance-0034.jpg;Ja;4.861004;52.371431;Bestand KMZ;Google My Maps
+35;Elegaststraat 15HS;A1;Nein;photos/entrance-0035.jpg;Ja;4.8560169;52.3778504;Bestand KMZ;Google My Maps
+36;Oosterpark 13A;A1;Ja;photos/entrance-0036.jpg;Ja;4.9179906;52.3580762;Bestand KMZ;Google My Maps
+37;Oosterpark 40, 2;A1;Nein;photos/entrance-0037.jpg;Ja;4.9201571;52.3585977;Bestand KMZ;Google My Maps
+38;Oostenburgermiddenstraat 269;A1;Ja;photos/entrance-0038.jpg;Ja;4.927865;52.372237;Bestand KMZ;Google My Maps
+39;Tweede Sweelinckstraat 12II;A1;Nein;photos/entrance-0039.jpg;Ja;4.8993381;52.3537295;Bestand KMZ;Google My Maps
+40;Elandsgracht 39;A1;Nein;photos/entrance-0040.jpg;Ja;4.8811276;52.3695545;Bestand KMZ;Google My Maps
+41;Sarphatipark 124;A1;Nein;photos/entrance-0041.jpg;Ja;4.8983849;52.3537993;Bestand KMZ;Google My Maps
+42;Hacquartstraat 24HS;A1;Ja;photos/entrance-0042.jpg;Ja;4.8737768;52.3529694;Bestand KMZ;Google My Maps
+43;Thérèse Schwartzeplein 11B;A1;Ja;photos/entrance-0043.jpg;Ja;4.8982667;52.3495928;Bestand KMZ;Google My Maps
+44;Zaanstraat 258;C1;Ja;photos/entrance-0044.jpg;Ja;4.8723259;52.3906646;Bestand KMZ;Google My Maps
+45;Amstel 95;A3;Nein;photos/entrance-0045.jpg;Ja;4.903495;52.3633245;Bestand KMZ;Google My Maps
+46;Amstel 101;A3;Nein;photos/entrance-0046.jpg;Ja;4.903473;52.363167;Bestand KMZ;Google My Maps
+47;Brouwersgracht 131;A3;Nein;photos/entrance-0047.jpg;Ja;4.8864826;52.3813385;Bestand KMZ;Google My Maps
+48;Geldersekade 75;A3;Nein;photos/entrance-0048.jpg;Ja;4.901983;52.3745067;Bestand KMZ;Google My Maps
+49;Hobbemakade 91III;A3;Nein;photos/entrance-0049.jpg;Ja;4.8857371;52.3517963;Bestand KMZ;Google My Maps
+50;Hoogte Kadijk 9;A3;Nein;photos/entrance-0050.jpg;Ja;4.913568;52.3701411;Bestand KMZ;Google My Maps
+51;Kalkmarkt 4;A3;Nein;photos/entrance-0051.jpg;Ja;4.9068791;52.3728212;Bestand KMZ;Google My Maps
+52;Kalkmarkt 11;A3;Nein;photos/entrance-0052.jpg;Ja;4.9064526;52.372612;Bestand KMZ;Google My Maps
+53;Keizersgracht 721;A3;Nein;photos/entrance-0053.jpg;Ja;4.8991754;52.3642832;Bestand KMZ;Google My Maps
+54;Prinsengracht 206;A3;Nein;photos/entrance-0054.jpg;Ja;4.8826367;52.3732292;Bestand KMZ;Google My Maps
+55;Korte Keizersdwarsstraat 3;A3;Nein;photos/entrance-0055.jpg;Ja;4.9031625;52.3714971;Bestand KMZ;Google My Maps
+56;Raphaëlplein 9;A3;Nein;photos/entrance-0056.jpg;Ja;4.8704041;52.3482343;Bestand KMZ;Google My Maps
+57;Reguliersgracht 101;A3;Ja;photos/entrance-0057.jpg;Ja;4.8964625;52.3606321;Bestand KMZ;Google My Maps
+58;Reguliersgracht 105;A3;Nein;photos/entrance-0058.jpg;Ja;4.896434;52.360534;Bestand KMZ;Google My Maps
+59;Reijnier Vinkeleskade 14HS;A3;Nein;photos/entrance-0059.jpg;Ja;4.8835076;52.350739;Bestand KMZ;Google My Maps
+60;Reijnier Vinkeleskade 18I;A3;Nein;photos/entrance-0060.jpg;Ja;4.8831253;52.3508002;Bestand KMZ;Google My Maps
+61;Tweede Weteringdwarsstraat 10;A3;Nein;photos/entrance-0061.jpg;Ja;4.888028;52.3615103;Bestand KMZ;Google My Maps
+62;Tweede Weteringdwarsstraat 19HS;A3;Nein;photos/entrance-0062.jpg;Ja;4.8879577;52.3616655;Bestand KMZ;Google My Maps
+63;Tweede Weteringdwarsstraat 23I;A3;Nein;photos/entrance-0063.jpg;Ja;4.888114;52.3616454;Bestand KMZ;Google My Maps
+64;Reguliersgracht 90;A3;Ja;photos/entrance-0064.jpg;Ja;4.8957877;52.3618843;Bestand KMZ;Google My Maps
+65;Reguliersgracht 83;A3;Nein;photos/entrance-0065.jpg;Ja;4.8963973;52.3610756;Bestand KMZ;Google My Maps
+66;Seranggracht 3;A3;Ja;photos/entrance-0066.jpg;Ja;4.9330998;52.3779361;Bestand KMZ;Google My Maps
+67;Passeerdersgracht 2;A3;Ja;photos/entrance-0067.jpg;Ja;4.8820796;52.3675183;Bestand KMZ;Google My Maps
+68;Weteringstraat 25;A3;Nein;photos/entrance-0068.jpg;Ja;4.8889512;52.3616244;Bestand KMZ;Google My Maps
+69;Kromme Waal 22;A3;Nein;photos/entrance-0069.jpg;Ja;4.9024703;52.3746358;Bestand KMZ;Google My Maps
+70;Kromme Waal 24;A3;Nein;photos/entrance-0070.jpg;Ja;4.902506;52.374525;Bestand KMZ;Google My Maps
+71;Prinsengracht 340;A3;Nein;photos/entrance-0071.jpg;Ja;4.8822309;52.3684177;Bestand KMZ;Google My Maps
+72;Prinsengracht 338;A3;Nein;photos/entrance-0072.jpg;Ja;4.8822007;52.3684943;Bestand KMZ;Google My Maps
+73;Kromme Waal 25;A3;Nein;photos/entrance-0073.jpg;Ja;4.902492;52.374489;Bestand KMZ;Google My Maps
+74;Prinsengracht 160;A3;Nein;photos/entrance-0074.jpg;Ja;4.8828542;52.3749232;Bestand KMZ;Google My Maps
+75;Prinsengracht 162;A3;Nein;photos/entrance-0075.webp;Ja;4.8826998;52.3747837;Bestand KMZ;Google My Maps
+76;Oudeschans 44;A3;Nein;photos/entrance-0076.jpg;Ja;4.9034584;52.3712416;Bestand KMZ;Google My Maps
+77;Reguliersgracht 91;A3;Nein;photos/entrance-0077.jpg;Ja;4.8964456;52.3608202;Bestand KMZ;Google My Maps
+78;Reguliersgracht 76;A3;Nein;photos/entrance-0078.jpg;Ja;4.89577;52.36223;Bestand KMZ;Google My Maps
+79;Amstel 79;A3;Nein;photos/entrance-0079.jpg;Ja;4.903197;52.3638241;Bestand KMZ;Google My Maps
+80;Jozef Israëlskade 5;A3;Nein;photos/entrance-0080.jpg;Ja;4.8871622;52.3487384;Bestand KMZ;Google My Maps
+81;Zoutkeetsgracht 43;A3;Ja;photos/entrance-0081.jpg;Ja;4.889469;52.3881084;Bestand KMZ;Google My Maps
+82;Laagte Kadijk 9;A3;Nein;photos/entrance-0082.jpg;Ja;4.9126674;52.3699187;Bestand KMZ;Google My Maps
+83;Nieuwendammerdijk 355;A3;Nein;photos/entrance-0083.jpg;Ja;4.94172;52.3907966;Bestand KMZ;Google My Maps
+84;Nieuwendammerdijk 359;A3;Nein;photos/entrance-0084.jpg;Ja;4.9419188;52.3907487;Bestand KMZ;Google My Maps
+85;Nieuwendammerdijk 381;A3;Nein;photos/entrance-0085.jpg;Ja;4.942633;52.390217;Bestand KMZ;Google My Maps
+86;Nieuwendammerdijk 385;A3;Nein;photos/entrance-0086.jpg;Ja;4.9428643;52.3901816;Bestand KMZ;Google My Maps
+87;Nieuwendammerdijk 407;A3;Nein;photos/entrance-0087.jpg;Ja;4.9437131;52.3897727;Bestand KMZ;Google My Maps
+88;Avercampstraat 41;A3;Nein;photos/entrance-0088.jpg;Ja;4.8930768;52.3501079;Bestand KMZ;Google My Maps
+89;Veeteeltstraat 145;A3;Ja;photos/entrance-0089.jpg;Ja;4.9417615;52.3401481;Bestand KMZ;Google My Maps
+90;Anfieldroad 208;A3;Nein;photos/entrance-0090.jpg;Ja;4.949102;52.342838;Bestand KMZ;Google My Maps
+91;Middenweg 227I;A3;Nein;photos/entrance-0091.jpg;Ja;4.9375855;52.3496139;Bestand KMZ;Google My Maps
+92;Paradijsplein 20;A3;Nein;photos/entrance-0092.jpg;Ja;4.9328658;52.357389;Bestand KMZ;Google My Maps
+93;Brouwersgracht 218;A3;Ja;photos/entrance-0093.jpg;Ja;4.886499;52.381888;Bestand KMZ;Google My Maps
+94;Lauriergracht 2;A3;Nein;photos/entrance-0094.jpg;Ja;4.8823298;52.3720874;Bestand KMZ;Google My Maps
+95;Kloveniersburgwal 111;A3;Nein;photos/entrance-0095.jpg;Ja;4.896941;52.368643;Bestand KMZ;Google My Maps
+96;Spadinalaan 426;A3;Nein;photos/entrance-0096.webp;Ja;4.902876;52.386945;Bestand KMZ;Google My Maps
+97;Rozenstraat 2;A3;Nein;photos/entrance-0097.jpg;Ja;4.882501;52.3732365;Bestand KMZ;Google My Maps
+98;Egelantiersgracht 66C;A3;Ja;photos/entrance-0098.jpg;Ja;4.8825223;52.376379;Bestand KMZ;Google My Maps
+99;Rubensstraat 20H;A3;Nein;photos/entrance-0099.jpg;Ja;4.8732687;52.3493752;Bestand KMZ;Google My Maps
+100;Watteaustraat 9;A3;Ja;photos/entrance-0100.jpg;Ja;4.8688862;52.3457826;Bestand KMZ;Google My Maps
+101;Herengracht 462;A3;Nein;photos/entrance-0101.jpg;Ja;4.8899158;52.3652572;Bestand KMZ;Google My Maps
+102;Herengracht 460;A3;Nein;photos/entrance-0102.jpg;Ja;4.889874;52.3654658;Bestand KMZ;Google My Maps
+103;Herengracht 398;A3;Nein;photos/entrance-0103.jpg;Ja;4.8867032;52.3673442;Bestand KMZ;Google My Maps
+104;Herengracht 402;A3;Nein;photos/entrance-0104.jpg;Ja;4.8868581;52.3672569;Bestand KMZ;Google My Maps
+105;Herengracht 404;A3;Nein;photos/entrance-0105.jpg;Ja;4.8868027;52.3671733;Bestand KMZ;Google My Maps
+106;Herengracht 394;A3;Nein;photos/entrance-0106.jpg;Ja;4.8862702;52.3676079;Bestand KMZ;Google My Maps
+107;Leliegracht 20;A3;Nein;photos/entrance-0107.jpg;Ja;4.8871148;52.3752474;Bestand KMZ;Google My Maps
+108;Egelantiersgracht 20B;A3;Nein;photos/entrance-0108.jpg;Ja;4.883826;52.3766483;Bestand KMZ;Google My Maps
+109;Binnen Brouwersstraat 37-3;A3;Ja;photos/entrance-0109.jpg;Ja;4.8904955;52.3798218;Bestand KMZ;Google My Maps
+110;Prinsengracht 660;A3;Nein;photos/entrance-0110.jpg;Ja;4.8924866;52.3618079;Bestand KMZ;Google My Maps
+111;Geldersekade 79;A4;Nein;photos/entrance-0111.jpg;Ja;4.901891;52.374424;Bestand KMZ;Google My Maps
+112;Leonardostraat 10;A4;Ja;photos/entrance-0112.jpg;Ja;4.868126;52.3489591;Bestand KMZ;Google My Maps
+113;Jacob Obrechtstraat 68;A4;Nein;photos/entrance-0007.jpg;Ja;4.8764383;52.3541363;Bestand KMZ;Google My Maps
+114;Jacob Obrechtstraat 70;A4;Nein;photos/entrance-0114.jpg;Ja;4.8764873;52.3540707;Bestand KMZ;Google My Maps
+115;Korte Marnixkade 4;A4;Nein;photos/entrance-0115.jpg;Ja;4.882338;52.3844221;Bestand KMZ;Google My Maps
+116;Heinzestraat 19;A4;Nein;photos/entrance-0116.jpg;Ja;4.8761862;52.3525777;Bestand KMZ;Google My Maps
+117;Tweede Jan Steenstraat 32;C1;Ja;photos/entrance-0117.jpg;Ja;4.8996127;52.3557847;Bestand KMZ;Google My Maps
+118;Bloemgracht 195;A4;Nein;photos/entrance-0118.jpg;Ja;4.8771236;52.3736903;Bestand KMZ;Google My Maps
+119;Schippersgracht 6;A4;Nein;photos/entrance-0119.jpg;Ja;4.9117322;52.370836;Bestand KMZ;Google My Maps
+120;Kromme Waal 21;A4;Nein;photos/entrance-0120.jpg;Ja;4.902563;52.374678;Bestand KMZ;Google My Maps
+121;Eerste Jan van der Heijdenstraat 44;A4;Nein;photos/entrance-0121.jpg;Ja;4.8884266;52.3529738;Bestand KMZ;Google My Maps
+122;Johannes Verhulststraat 42;A4;Nein;photos/entrance-0122.jpg;Ja;4.8750097;52.3554032;Bestand KMZ;Google My Maps
+123;Plantage Middenlaan 33;A4;Nein;photos/entrance-0123.jpg;Ja;4.9112638;52.3668473;Bestand KMZ;Google My Maps
+124;Eerste Jan Steenstraat 30C;A4;Ja;photos/entrance-0124.jpg;Ja;4.8883054;52.353572;Bestand KMZ;Google My Maps
+125;Laan der Hesperiden 10;A4;Ja;photos/entrance-0125.jpg;Ja;4.8568716;52.3454118;Bestand KMZ;Google My Maps
+126;Gaasterlandstraat 200;A4;Nein;photos/entrance-0126.jpg;Ja;4.8954783;52.33785;Bestand KMZ;Google My Maps
+127;Amstelkade 30;A4;Ja;photos/entrance-0127.jpg;Ja;4.9048869;52.3488842;Bestand KMZ;Google My Maps
+128;Haarlemmer Houttuinen 337;A4;Ja;photos/entrance-0128.jpg;Ja;4.8887092;52.3825109;Bestand KMZ;Google My Maps
+129;Houthavenkade 93;A4;Ja;photos/entrance-0129.jpg;Ja;4.8794948;52.395543;Bestand KMZ;Google My Maps
+130;Nieuwendammerdijk 403;A4;Nein;photos/entrance-0130.jpg;Ja;4.9435528;52.3898453;Bestand KMZ;Google My Maps
+131;Schagerlaan 9;A4;Nein;photos/entrance-0131.jpg;Ja;4.9234508;52.3478963;Bestand KMZ;Google My Maps
+132;Lizzy Ansinghstraat 40;C4;Ja;photos/entrance-0132.jpg;Ja;4.8923273;52.3496423;Bestand KMZ;Google My Maps
+133;Egstraat 6;A4;Nein;photos/entrance-0133.jpg;Ja;4.9458796;52.3434802;Bestand KMZ;Google My Maps
+134;Middenweg 221;A4;Nein;photos/entrance-0134.jpg;Ja;4.9374762;52.349689;Bestand KMZ;Google My Maps
+135;Middenweg 215;A4;Nein;photos/entrance-0135.jpg;Ja;4.93728;52.3498105;Bestand KMZ;Google My Maps
+136;Hammarbystraat 256;A4;Ja;photos/entrance-0136.jpg;Ja;4.9031;52.386525;Bestand KMZ;Google My Maps
+137;Schippersgracht 13;A4;Nein;photos/entrance-0137.jpg;Ja;4.9114522;52.370622;Bestand KMZ;Google My Maps
+138;Borneokade 345;A4;Ja;photos/entrance-0138.jpg;Ja;4.951168;52.3717524;Bestand KMZ;Google My Maps
+139;Churchill-laan 240II;A4;Ja;photos/entrance-0139.jpg;Ja;4.8903043;52.3475174;Bestand KMZ;Google My Maps
+140;Geuzenkade 61;A4;Nein;photos/entrance-0140.jpg;Ja;4.8644011;52.373703;Bestand KMZ;Google My Maps
+141;Geuzenkade 38I;A4;Nein;photos/entrance-0141.jpg;Ja;4.866057;52.3728325;Bestand KMZ;Google My Maps
+142;Banstraat 5D;B1;Nein;photos/entrance-0142.jpg;Ja;4.87392;52.3555098;Bestand KMZ;Google My Maps
+143;Bronckhorststraat 29III;B1;Nein;photos/entrance-0143.jpg;Ja;4.8799606;52.352426;Bestand KMZ;Google My Maps
+144;Daniël Stalpertstraat 68;B1;Ja;photos/entrance-0144.jpg;Ja;4.88991;52.3561039;Bestand KMZ;Google My Maps
+145;Eerste Jan van der Heijdenstraat 29;B1;Nein;photos/entrance-0145.jpg;Ja;4.887475;52.353072;Bestand KMZ;Google My Maps
+146;Gerard Doustraat 143;B1;Nein;photos/entrance-0146.jpg;Ja;4.895817;52.356639;Bestand KMZ;Google My Maps
+147;Laagte Kadijk 6;B1;Nein;photos/entrance-0147.jpg;Ja;4.9125046;52.3699817;Bestand KMZ;Google My Maps
+148;Plantage Kerklaan 169;B1;Nein;photos/entrance-0148.jpg;Ja;4.913113;52.368216;Bestand KMZ;Google My Maps
+149;Sarphatipark 65;B1;Nein;photos/entrance-0149.jpg;Ja;4.8966215;52.355289;Bestand KMZ;Google My Maps
+150;Van Baerlestraat 101;B1;Nein;photos/entrance-0150.jpg;Ja;4.8821739;52.3535079;Bestand KMZ;Google My Maps
+151;Hercules Seghersstraat 30;B1;Nein;photos/entrance-0151.jpg;Ja;4.8887188;52.3533581;Bestand KMZ;Google My Maps
+152;Weteringschans 223;B1;Nein;photos/entrance-0152.jpg;Ja;4.8944511;52.359587;Bestand KMZ;Google My Maps
+153;Weteringschans 213;B1;Nein;photos/entrance-0153.jpg;Ja;4.8942727;52.3596041;Bestand KMZ;Google My Maps
+154;Weteringschans 197;B1;Ja;photos/entrance-0154.jpg;Ja;4.8936782;52.3596392;Bestand KMZ;Google My Maps
+155;Tweede Jan Steenstraat 854;B1;Nein;photos/entrance-0155.jpg;Ja;4.9019819;52.356738;Bestand KMZ;Google My Maps
+156;Witte de Withstraat 19C;B1;Ja;photos/entrance-0156.jpg;Ja;4.8591982;52.3657277;Bestand KMZ;Google My Maps
+157;Tweede Jan Steenstraat 51;B1;Nein;photos/entrance-0157.jpg;Ja;4.9007534;52.3563394;Bestand KMZ;Google My Maps
+158;Hemonystraat 41;B1;Nein;photos/entrance-0158.jpg;Ja;4.902966;52.356561;Bestand KMZ;Google My Maps
+159;Jan Maijenstraat 1;B1;Nein;photos/entrance-0159.jpg;Ja;4.8531996;52.3711357;Bestand KMZ;Google My Maps
+160;Jan Maijenstraat 15;B1;Nein;photos/entrance-0160.jpg;Ja;4.8519325;52.3708799;Bestand KMZ;Google My Maps
+161;Van Brakelstraat 30D;B1;Ja;photos/entrance-0161.jpg;Ja;4.8588848;52.3661577;Bestand KMZ;Google My Maps
+162;Torresstraat 67;B1;Nein;photos/entrance-0162.jpg;Ja;4.8512186;52.371716;Bestand KMZ;Google My Maps
+163;Tweede Laurierdwarsstraat 51 C;B1;Ja;photos/entrance-0163.jpg;Ja;4.8794798;52.3714528;Bestand KMZ;Google My Maps
+164;Gerrit van der Veenstraat 92;B4;Ja;photos/entrance-0164.jpg;Ja;4.8754114;52.3491162;Bestand KMZ;Google My Maps
+165;Gerrit van der Veenstraat 108II;B1;Nein;photos/entrance-0165.jpg;Ja;4.8717138;52.3490197;Bestand KMZ;Google My Maps
+166;Gerrit van der Veenstraat 139I;B4;Ja;photos/entrance-0166.jpg;Ja;4.8703032;52.3486444;Bestand KMZ;Google My Maps
+167;Jozef Israëlskade 52;B1;Ja;photos/entrance-0167.jpg;Ja;4.895854;52.348269;Bestand KMZ;Google My Maps
+168;Vrijheidslaan 10;B1;Nein;photos/entrance-0168.jpg;Ja;4.9104685;52.3473001;Bestand KMZ;Google My Maps
+169;Vrijheidslaan 51HS;B1;Nein;photos/entrance-0169.jpg;Ja;4.907871;52.3463702;Bestand KMZ;Google My Maps
+170;Houthavenweg 21, 175;B4;Ja;photos/entrance-0170.jpg;Ja;4.8736515;52.3939449;Bestand KMZ;Google My Maps
+171;Stettineiland 14;B1;Nein;photos/entrance-0171.jpg;Ja;4.878224;52.393384;Bestand KMZ;Google My Maps
+172;Tweede Atjehstraat 8HS;B1;Nein;photos/entrance-0172.jpg;Ja;4.9326765;52.3617645;Bestand KMZ;Google My Maps
+173;Laing's Nekstraat 11;B1;Ja;photos/entrance-0173.jpg;Ja;4.9231767;52.3562721;Bestand KMZ;Google My Maps
+174;Johan van Hasseltkade 222;B1;Nein;photos/entrance-0174.jpg;Ja;4.9052824;52.3954097;Bestand KMZ;Google My Maps
+175;Monnikskapstraat 24;B1;Ja;photos/entrance-0175.jpg;Ja;4.9051861;52.3984771;Bestand KMZ;Google My Maps
+176;Kaasjeskruidstraat 7;B1;Nein;photos/entrance-0176.jpg;Ja;4.9061096;52.3982889;Bestand KMZ;Google My Maps
+177;Monnikskapstraat 68;B1;Nein;photos/entrance-0177.jpg;Ja;4.903193;52.3992427;Bestand KMZ;Google My Maps
+178;Gerard Doustraat 158;B1;Nein;photos/entrance-0178.jpg;Ja;4.8945386;52.3561649;Bestand KMZ;Google My Maps
+179;Ruysdaelkade 7;B1;Nein;photos/entrance-0179.jpg;Ja;4.8875404;52.3591262;Bestand KMZ;Google My Maps
+180;Borneokade 303;B1;Nein;photos/entrance-0180.jpg;Ja;4.9492134;52.3715335;Bestand KMZ;Google My Maps
+181;Scheepstimmermanstraat 58;B1;Nein;photos/entrance-0181.jpg;Ja;4.9494228;52.372154;Bestand KMZ;Google My Maps
+182;Van Woustraat 46;B1;Nein;photos/entrance-0182.jpg;Ja;4.8998447;52.3562476;Bestand KMZ;Google My Maps
+183;Van Baerlestraat 166;B1;Nein;photos/entrance-0183.jpg;Ja;4.8815928;52.3535309;Bestand KMZ;Google My Maps
+184;Anthonie van Dijckstraat 6;B4;Ja;photos/entrance-0184.jpg;Ja;4.8751065;52.3484567;Bestand KMZ;Google My Maps
+185;Stadionweg 44;B1;Nein;photos/entrance-0185.jpg;Ja;4.8803693;52.347562;Bestand KMZ;Google My Maps
+186;Diezestraat;B1;Nein;photos/entrance-0186.jpg;Ja;4.891922;52.3459857;Bestand KMZ;Google My Maps
+187;Maasstraat 196hs;B1;Nein;photos/entrance-0187.jpg;Ja;4.897315;52.341401;Bestand KMZ;Google My Maps
+188;Zuidelijke Wandelweg 157;B1;Nein;photos/entrance-0188.jpg;Ja;4.8941849;52.3383059;Bestand KMZ;Google My Maps
+189;Herengracht 238;B1;Nein;photos/entrance-0189.jpg;Ja;4.8867103;52.3721583;Bestand KMZ;Google My Maps
+190;Krommeniestraat 4;B1;Nein;photos/entrance-0190.jpg;Ja;4.8757412;52.3907773;Bestand KMZ;Google My Maps
+191;Krommeniestraat 111;B4;Ja;photos/entrance-0191.jpg;Ja;4.8752704;52.3909201;Bestand KMZ;Google My Maps
+192;Saenredamstraat 11;B1;Nein;photos/entrance-0001.jpg;Ja;4.8876296;52.355907;Bestand KMZ;Google My Maps
+193;Vijzelgracht 27;B1;Nein;photos/entrance-0193.jpg;Ja;4.8917262;52.3612072;Bestand KMZ;Google My Maps
+194;Daniël Stalpertstraat 17;B1;Ja;photos/entrance-0194.jpg;Ja;4.8878873;52.3564643;Bestand KMZ;Google My Maps
+195;Brouwersgracht 155;B2;Nein;photos/entrance-0195.jpg;Ja;4.8856636;52.3817076;Bestand KMZ;Google My Maps
+196;Brouwersgracht 165;B2;Nein;photos/entrance-0196.jpg;Ja;4.885309;52.38198;Bestand KMZ;Google My Maps
+197;Brouwersgracht 175I;B2;Ja;photos/entrance-0197.jpg;Ja;4.8849716;52.3821357;Bestand KMZ;Google My Maps
+198;Gerard Doustraat 105;B2;Nein;photos/entrance-0198.jpg;Ja;4.89362;52.356163;Bestand KMZ;Google My Maps
+199;Hoogte Kadijk 26;B2;Nein;photos/entrance-0199.jpg;Ja;4.9132469;52.3699724;Bestand KMZ;Google My Maps
+200;Laagte Kadijk 2-G;B2;Nein;photos/entrance-0200.jpg;Ja;4.912279;52.3700773;Bestand KMZ;Google My Maps
+201;Nieuwevaart 99;B2;Nein;photos/entrance-0201.jpg;Ja;4.9148428;52.3701796;Bestand KMZ;Google My Maps
+202;Oude Waal 19;B2;Nein;photos/entrance-0202.jpg;Ja;4.9039068;52.3728793;Bestand KMZ;Google My Maps
+203;Saenredamstraat 22;B2;Nein;photos/entrance-0203.jpg;Ja;4.8881706;52.3556579;Bestand KMZ;Google My Maps
+204;Sarphatipark 67;B2;Nein;photos/entrance-0204.jpg;Ja;4.8966781;52.3553012;Bestand KMZ;Google My Maps
+205;Weteringstraat 17;B2;Nein;photos/entrance-0205.jpg;Ja;4.8890693;52.3619193;Bestand KMZ;Google My Maps
+206;Quellijnstraat 61;B2;Ja;photos/entrance-0206.jpg;Ja;4.8903513;52.3569217;Bestand KMZ;Google My Maps
+207;Tweede Jan Steenstraat 69;B2;Ja;photos/entrance-0207.jpg;Ja;4.9014966;52.3566025;Bestand KMZ;Google My Maps
+208;Hoogte Kadijk 23;B2;Nein;photos/entrance-0208.jpg;Ja;4.9140958;52.3699555;Bestand KMZ;Google My Maps
+209;Tweede Laurierdwarsstraat 56;B2;Nein;photos/entrance-0209.jpg;Ja;4.8792927;52.3713797;Bestand KMZ;Google My Maps
+210;Borssenburgplein 1-3hg;B2;Nein;photos/entrance-0210.jpg;Ja;4.9078281;52.3492585;Bestand KMZ;Google My Maps
+211;Houthavenkade 2;B2;Nein;photos/entrance-0211.jpg;Ja;4.8764625;52.3943849;Bestand KMZ;Google My Maps
+212;Haparandaweg 910;B2;Nein;photos/entrance-0212.jpg;Ja;4.8779299;52.395111;Bestand KMZ;Google My Maps
+213;Haparandaweg 1000;B2;Nein;photos/entrance-0213.jpg;Ja;4.8786131;52.3954448;Bestand KMZ;Google My Maps
+214;Thérèse Schwartzeplein 33;B2;Nein;photos/entrance-0214.jpg;Ja;4.898632;52.348986;Bestand KMZ;Google My Maps
+215;Stettineiland 29;B2;Ja;photos/entrance-0215.jpg;Ja;4.878466;52.393718;Bestand KMZ;Google My Maps
+216;Nieuwendammerdijk 401;B2;Nein;photos/entrance-0216.jpg;Ja;4.9434541;52.3898685;Bestand KMZ;Google My Maps
+217;Nieuwendammerdijk 405;B2;Nein;photos/entrance-0217.jpg;Ja;4.94359;52.3897968;Bestand KMZ;Google My Maps
+218;Nieuwendammerdijk 409;B2;Nein;photos/entrance-0218.jpg;Ja;4.9437926;52.3897084;Bestand KMZ;Google My Maps
+219;Schellingwouderdijk 161;B2;Nein;photos/entrance-0219.jpg;Ja;4.9577947;52.3860135;Bestand KMZ;Google My Maps
+220;Schellingwouderdijk 175;B2;Nein;photos/entrance-0220.jpg;Ja;4.9584063;52.3858723;Bestand KMZ;Google My Maps
+221;Laing's Nekstraat 7;B2;Ja;photos/entrance-0221.jpg;Ja;4.9231902;52.3561695;Bestand KMZ;Google My Maps
+222;Bloemstraat 140;B2;Ja;photos/entrance-0222.jpg;Ja;4.8788999;52.3736507;Bestand KMZ;Google My Maps
+223;Vinkenstraat 14A;B2;Nein;photos/entrance-0223.jpg;Ja;4.8883873;52.3815403;Bestand KMZ;Google My Maps
+224;Floraweg 45;B2;Nein;photos/entrance-0224.jpg;Ja;4.9160399;52.4001077;Bestand KMZ;Google My Maps
+225;Scheepstimmermanstraat 98;B2;Nein;photos/entrance-0225.jpg;Ja;4.9505478;52.3723089;Bestand KMZ;Google My Maps
+226;Scheepstimmermanstraat 106;B2;Nein;photos/entrance-0226.jpg;Ja;4.950855;52.3723258;Bestand KMZ;Google My Maps
+227;Stuurmankade 366;B2;Nein;photos/entrance-0227.jpg;Ja;4.9514659;52.3727602;Bestand KMZ;Google My Maps
+228;Stuurmankade 302;B2;Nein;photos/entrance-0228.jpg;Ja;4.9486076;52.3724214;Bestand KMZ;Google My Maps
+229;Egelantiersgracht 36I;B2;Ja;photos/entrance-0229.jpg;Ja;4.8832543;52.376556;Bestand KMZ;Google My Maps
+230;Zaanstraat 204;B2;Ja;photos/entrance-0230.jpg;Ja;4.8753676;52.3893206;Bestand KMZ;Google My Maps
+231;Spaarndammerplantsoen 136;B2;Nein;photos/entrance-0231.jpg;Ja;4.874667;52.390022;Bestand KMZ;Google My Maps
+232;Langestraat 76;B2;Nein;photos/entrance-0232.jpg;Ja;4.8912481;52.3774435;Bestand KMZ;Google My Maps
+233;Kalkmarkt 13;B3;Ja;photos/entrance-0233.jpg;Ja;4.9063691;52.3725447;Bestand KMZ;Google My Maps
+234;Korte Keizersdwarsstraat 7;B3;Nein;photos/entrance-0234.jpg;Ja;4.9030915;52.3714226;Bestand KMZ;Google My Maps
+235;Korte Keizersstraat 22;B3;Nein;photos/entrance-0235.jpg;Ja;4.9029413;52.3710835;Bestand KMZ;Google My Maps
+236;Oud-Zuid;B3;Nein;;Nein;4.8708814;52.3486191;Bestand KMZ;Google My Maps
+237;Reijnier Vinkeleskade 7;B3;Nein;photos/entrance-0237.jpg;Ja;4.8841842;52.350607;Bestand KMZ;Google My Maps
+238;Saenredamstraat 27;B3;Nein;photos/entrance-0238.jpg;Ja;4.8881765;52.3558789;Bestand KMZ;Google My Maps
+239;Tweede Jan Steenstraat 83;B3;Ja;photos/entrance-0239.jpg;Ja;4.9018993;52.3567149;Bestand KMZ;Google My Maps
+240;Oudeschans 54III;B3;Nein;photos/entrance-0240.jpg;Ja;4.9031835;52.3711117;Bestand KMZ;Google My Maps
+241;Weteringstraat 8;B3;Nein;photos/entrance-0241.jpg;Ja;4.8888872;52.3620835;Bestand KMZ;Google My Maps
+242;Korte Koningsstraat 15C;B3;Nein;photos/entrance-0242.jpg;Ja;4.9031179;52.3717405;Bestand KMZ;Google My Maps
+243;Korte Keizersdwarsstraat 2;B3;Nein;photos/entrance-0243.jpg;Ja;4.9030807;52.3715866;Bestand KMZ;Google My Maps
+244;Mesdagstraat 58I;B3;Nein;photos/entrance-0244.jpg;Ja;4.896047;52.348577;Bestand KMZ;Google My Maps
+245;Holendrechtstraat 13;B2;Ja;photos/entrance-0245.jpg;Ja;4.90921;52.3489022;Bestand KMZ;Google My Maps
+246;Rozenoordpad 25;B3;Nein;photos/entrance-0246.jpg;Ja;4.8936357;52.336843;Bestand KMZ;Google My Maps
+247;Singel 382;B3;Nein;photos/entrance-0247.jpg;Ja;4.8874832;52.3694082;Bestand KMZ;Google My Maps
+248;Singel 396, 1016 AJ Amsterdam, Niederlande;B3;Nein;photos/entrance-0248.jpg;Ja;4.8874793;52.3691118;Bestand KMZ;Google My Maps
+249;Slatuinenweg 42;B3;Ja;photos/entrance-0249.jpg;Ja;4.8635549;52.3701312;Bestand KMZ;Google My Maps
+250;Granidastraat 3HS;B3;Nein;photos/entrance-0250.jpg;Ja;4.8478319;52.3802107;Bestand KMZ;Google My Maps
+251;Nieuwendammerdijk 365;B3;Nein;photos/entrance-0251.jpg;Ja;4.9421839;52.3905814;Bestand KMZ;Google My Maps
+252;Nieuwendammerdijk 353;B3;Nein;photos/entrance-0252.jpg;Ja;4.941583;52.3908597;Bestand KMZ;Google My Maps
+253;Celsiusstraat 31;B3;Nein;photos/entrance-0253.jpg;Ja;4.9254069;52.3426835;Bestand KMZ;Google My Maps
+254;Celsiusstraat 37;B2;Ja;photos/entrance-0254.jpg;Ja;4.92558;52.3427866;Bestand KMZ;Google My Maps
+255;Oostenburgermiddenstraat 3;B3;Ja;photos/entrance-0255.jpg;Ja;4.9252798;52.3706127;Bestand KMZ;Google My Maps
+256;Veeteeltstraat 130;B3;Ja;photos/entrance-0256.jpg;Ja;4.9420273;52.3403749;Bestand KMZ;Google My Maps
+257;Edisonstraat;B3;Ja;photos/entrance-0257.jpg;Ja;4.9451706;52.351242;Bestand KMZ;Google My Maps
+258;Jennerstraat 6;B3;Nein;photos/entrance-0258.jpg;Ja;4.9387185;52.347949;Bestand KMZ;Google My Maps
+259;Sumatraplantsoen 136;B3;Nein;photos/entrance-0259.jpg;Ja;4.9439604;52.359356;Bestand KMZ;Google My Maps
+260;Zeeburgerkade 902;B3;Nein;photos/entrance-0260.jpg;Ja;4.9486925;52.3693058;Bestand KMZ;Google My Maps
+261;Tweede Atjehstraat 10II;B3;Nein;photos/entrance-0261.jpg;Ja;4.9327501;52.3617468;Bestand KMZ;Google My Maps
+262;Transvaalkade 3-A;B3;Nein;photos/entrance-0262.jpg;Ja;4.9278482;52.3554137;Bestand KMZ;Google My Maps
+263;Kloveniersburgwal 107;B3;Ja;photos/entrance-0263.jpg;Ja;4.8971617;52.3687462;Bestand KMZ;Google My Maps
+264;KNSM-Laan 576;B3;Ja;photos/entrance-0264.jpg;Ja;4.9418466;52.3769256;Bestand KMZ;Google My Maps
+265;Scheepstimmermanstraat 128;B3;Ja;photos/entrance-0265.jpg;Ja;4.9516649;52.3724165;Bestand KMZ;Google My Maps
+266;Frans van Mierisstraat 136I;B3;Nein;photos/entrance-0266.jpg;Ja;4.8757906;52.353171;Bestand KMZ;Google My Maps
+267;Rubensstraat 34I;B3;Ja;photos/entrance-0267.jpg;Ja;4.8733587;52.3485137;Bestand KMZ;Google My Maps
+268;Herengracht 278;B3;Nein;photos/entrance-0268.jpg;Ja;4.8865839;52.3709063;Bestand KMZ;Google My Maps
+269;Bartholomeus Ruloffsstraat 1 1;B4;Nein;photos/entrance-0269.jpg;Ja;4.8788138;52.3526835;Bestand KMZ;Google My Maps
+270;Korte Keizersdwarsstraat 8;B4;Nein;photos/entrance-0270.jpg;Ja;4.9029628;52.3715222;Bestand KMZ;Google My Maps
+271;Johan M. Coenenstraat 12HS;B4;Ja;photos/entrance-0271.jpg;Ja;4.8808779;52.3523844;Bestand KMZ;Google My Maps
+272;Eosstraat 194;B4;Ja;photos/entrance-0272.jpg;Ja;4.8555026;52.3461278;Bestand KMZ;Google My Maps
+273;Churchill-laan 211;B4;Ja;photos/entrance-0273.jpg;Ja;4.8872989;52.3470509;Bestand KMZ;Google My Maps
+274;Haarlemmerweg 1164;B4;Nein;photos/entrance-0274.jpg;Ja;4.8516357;52.3856115;Bestand KMZ;Google My Maps
+275;Von Guerickestraat 111;B4;Nein;photos/entrance-0275.jpg;Ja;4.9266242;52.3429383;Bestand KMZ;Google My Maps
+276;Sumatraplantsoen 138;B4;Nein;photos/entrance-0276.jpg;Ja;4.944052;52.359361;Bestand KMZ;Google My Maps
+277;Paradijsplein 58;B4;Nein;photos/entrance-0277.jpg;Ja;4.932821;52.357626;Bestand KMZ;Google My Maps
+278;Weesperstraat 59;B4;Ja;photos/entrance-0278.jpg;Ja;4.9057237;52.3654649;Bestand KMZ;Google My Maps
+279;Céramiquelaan 191;B4;Nein;photos/entrance-0279.jpg;Ja;4.903068;52.385925;Bestand KMZ;Google My Maps
+280;Conny Stuartstraat 70;B4;Nein;photos/entrance-0280.jpg;Ja;4.9011917;52.3934537;Bestand KMZ;Google My Maps
+281;Dotterbloemstraat 36;B4;Nein;photos/entrance-0281.jpg;Ja;4.9156493;52.3985642;Bestand KMZ;Google My Maps
+282;Keizersgracht 329;C1;Ja;photos/entrance-0282.jpg;Ja;4.8850426;52.3695342;Bestand KMZ;Google My Maps
+283;Falckstraat 7;C1;Nein;photos/entrance-0283.jpg;Ja;4.8966284;52.3605913;Bestand KMZ;Google My Maps
+284;Korte Marnixkade 2;C1;Nein;photos/entrance-0284.jpg;Ja;4.8823038;52.3844932;Bestand KMZ;Google My Maps
+285;Plantage Parklaan 24II;C1;Nein;photos/entrance-0285.jpg;Ja;4.9107173;52.3683807;Bestand KMZ;Google My Maps
+286;Sarphatipark 79;C1;Nein;photos/entrance-0286.jpg;Ja;4.8971854;52.3554136;Bestand KMZ;Google My Maps
+287;Weteringschans 225;C1;Ja;photos/entrance-0003.jpg;Ja;4.8946593;52.3595776;Bestand KMZ;Google My Maps
+288;Tweede Jan Steenstraat 52;C1;Nein;photos/entrance-0288.jpg;Ja;4.901034;52.3561864;Bestand KMZ;Google My Maps
+289;Zwanenburgwal 230;C1;Nein;photos/entrance-0289.jpg;Ja;4.898663;52.368253;Bestand KMZ;Google My Maps
+290;Andreas Bonnstraat 5II;C1;Ja;photos/entrance-0290.jpg;Ja;4.9138501;52.3595556;Bestand KMZ;Google My Maps
+291;Sarphatipark 30;C1;Nein;photos/entrance-0291.jpg;Ja;4.8941239;52.3535573;Bestand KMZ;Google My Maps
+292;Albrecht Dürerstraat 37I;C1;Ja;photos/entrance-0292.jpg;Ja;4.8761634;52.348;Bestand KMZ;Google My Maps
+293;Biesboschstraat 26I;C1;Ja;photos/entrance-0293.jpg;Ja;4.8984736;52.3454593;Bestand KMZ;Google My Maps
+294;Noorderdwarsstraat 1;C1;Ja;photos/entrance-0294.jpg;Ja;4.8940401;52.361523;Bestand KMZ;Google My Maps
+295;Ruysdaelkade 79;C1;Nein;photos/entrance-0295.jpg;Ja;4.887129;52.356161;Bestand KMZ;Google My Maps
+296;Hoogte Kadijk 44;C3;Nein;photos/entrance-0296.jpg;Ja;4.9136667;52.3698419;Bestand KMZ;Google My Maps
+297;Prinsengracht 809;C3;Nein;photos/entrance-0297.jpg;Ja;4.8883943;52.3628809;Bestand KMZ;Google My Maps
+298;Reguliersgracht 93A;C3;Nein;photos/entrance-0298.jpg;Ja;4.896454;52.3607903;Bestand KMZ;Google My Maps
+299;Weteringstraat 13;C3;Nein;photos/entrance-0299.jpg;Ja;4.889151;52.3619909;Bestand KMZ;Google My Maps
+300;Weteringstraat 4;C3;Nein;photos/entrance-0300.jpg;Ja;4.8889378;52.3621528;Bestand KMZ;Google My Maps
+301;Singel 378;C3;Ja;photos/entrance-0301.jpg;Ja;4.887599;52.369495;Bestand KMZ;Google My Maps
+302;Lauriergracht 25;C3;Ja;photos/entrance-0302.jpg;Ja;4.881706;52.3714568;Bestand KMZ;Google My Maps
+303;Prinsengracht 135;C3;Nein;photos/entrance-0303.jpg;Ja;4.8870313;52.3784708;Bestand KMZ;Google My Maps
+304;Herengracht 240;C3;Ja;photos/entrance-0304.jpg;Ja;4.8866374;52.3721208;Bestand KMZ;Google My Maps
+305;Herengracht 404;C3;Nein;photos/entrance-0305.jpg;Ja;4.8868027;52.3671733;Bestand KMZ;Google My Maps
+306;Reguliersgracht 134;C3;Ja;photos/entrance-0306.jpg;Ja;4.895927;52.359947;Bestand KMZ;Google My Maps
+307;Prinsengracht 690;C3;Nein;photos/entrance-0307.jpg;Ja;4.8936825;52.3616412;Bestand KMZ;Google My Maps
+308;Prinsengracht 686;C3;Nein;photos/entrance-0308.jpg;Ja;4.893533;52.361699;Bestand KMZ;Google My Maps
+309;Prinsengracht 802;C3;Ja;photos/entrance-0309.jpg;Ja;4.8986635;52.3617848;Bestand KMZ;Google My Maps
+310;Prinsengracht 824;C3;Nein;photos/entrance-0310.jpg;Ja;4.899851;52.3620738;Bestand KMZ;Google My Maps
+311;Prinsengracht 1063;C3;Ja;photos/entrance-0311.jpg;Ja;4.8993418;52.3624116;Bestand KMZ;Google My Maps
+312;Reguliersgracht 88;C3;Ja;photos/entrance-0312.jpg;Ja;4.8957456;52.3619258;Bestand KMZ;Google My Maps
+313;Gerard Terborgstraat 8;C4;Ja;photos/entrance-0313.jpg;Ja;4.8852838;52.3516506;Bestand KMZ;Google My Maps
+314;Hobbemakade 96;C4;Nein;photos/entrance-0314.jpg;Ja;4.8853024;52.3512181;Bestand KMZ;Google My Maps
+315;Leidsegracht 115I;C4;Nein;photos/entrance-0315.jpg;Ja;4.8805813;52.3651733;Bestand KMZ;Google My Maps
+316;Bloemgracht 131;C3;Ja;photos/entrance-0316.jpg;Ja;4.8784651;52.3739982;Bestand KMZ;Google My Maps
+317;Amsteldijk 122;C4;Nein;photos/entrance-0317.jpg;Ja;4.9101978;52.3479976;Bestand KMZ;Google My Maps
+318;Silodam 300;C4;Ja;photos/entrance-0318.jpg;Ja;4.8906923;52.3918995;Bestand KMZ;Google My Maps
+319;Singel 428;C4;Ja;photos/entrance-0319.jpg;Ja;4.8877584;52.3682692;Bestand KMZ;Google My Maps
+320;Zoutkeetsgracht 7;C4;Ja;photos/entrance-0320.jpg;Ja;4.8889228;52.3880651;Bestand KMZ;Google My Maps
+321;Leidsegracht 6 H;C4;Ja;photos/entrance-0321.jpg;Ja;4.8860564;52.3675594;Bestand KMZ;Google My Maps
+322;Prinsengracht 814;C4;Ja;photos/entrance-0322.jpg;Ja;4.8995687;52.3619266;Bestand KMZ;Google My Maps
+323;Prins Hendrikkade 126;C4;Ja;photos/entrance-0323.jpg;Ja;4.905111;52.374015;Bestand KMZ;Google My Maps
+324;Jozef Israëlskade 2;C4;Ja;photos/entrance-0324.jpg;Ja;4.886901;52.34886;Bestand KMZ;Google My Maps
+325;Reguliersgracht 92;A3;Nein;photos/entrance-0325.jpg;Ja;4.8957984;52.3618396;Bestand KMZ;Google My Maps
+326;Daniël Stalpertstraat 11;B1;Nein;photos/entrance-0326.jpg;Ja;4.8876875;52.3564726;Bestand KMZ;Google My Maps
+327;Daniël Stalpertstraat 23;B1;Nein;photos/entrance-0327.jpg;Ja;4.8880868;52.3564536;Bestand KMZ;Google My Maps
+328;Van Hallstraat 609;B3;Nein;photos/entrance-0328.jpg;Ja;4.8718044;52.379922;Bestand KMZ;Google My Maps
+329;Van der Palmkade 7;B4;Nein;photos/entrance-0329.jpg;Ja;4.873195;52.380728;Bestand KMZ;Google My Maps
+330;Marnixstraat;A1;Nein;photos/entrance-0330.jpg;Ja;4.8796758;52.3662863;Bestand KMZ;Google My Maps
+331;Herengracht 361;A3;Nein;photos/entrance-0331.jpg;Ja;4.8871973;52.3689816;Bestand KMZ;Google My Maps
+332;Apollolaan 65;A4;Nein;photos/entrance-0332.jpg;Ja;4.879872;52.3500007;Bestand KMZ;Google My Maps
+333;Nicolaas Beetsstraat 243;A4;Nein;photos/entrance-0333.jpg;Ja;4.8665307;52.3642811;Bestand KMZ;Google My Maps
+334;Meerhuizenplein 34;B1;Nein;photos/entrance-0334.jpg;Ja;4.907811;52.3472901;Bestand KMZ;Google My Maps
+335;Herengracht 344;B2;Nein;photos/entrance-0335.jpg;Ja;4.8863213;52.3691583;Bestand KMZ;Google My Maps
+336;Leidsegracht 16A;C1;Nein;photos/entrance-0336.jpg;Ja;4.8857223;52.367399;Bestand KMZ;Google My Maps
+337;Leliegracht 10A;C4;Nein;photos/entrance-0337.jpg;Ja;4.8874264;52.3750567;Bestand KMZ;Google My Maps
+338;Gerrit van der Veenstraat 2HS;A1;Nein;photos/entrance-0338.jpg;Ja;4.881353;52.3493369;Bestand KMZ;Google My Maps
+339;Apollolaan 27;A4;Nein;photos/entrance-0339.jpg;Ja;4.8815098;52.3494459;Bestand KMZ;Google My Maps
+340;Koninginneweg 8;A4;Nein;photos/entrance-0340.jpg;Ja;4.8676006;52.3554754;Bestand KMZ;Google My Maps
+341;Borneolaan 173;A1;Nein;photos/entrance-0341.jpg;Ja;4.9370538;52.3716497;Bestand KMZ;Google My Maps
+342;Lijnbaansgracht 385;A1;Nein;photos/entrance-0342.jpg;Ja;4.8953624;52.3599713;Bestand KMZ;Google My Maps
+343;Wittenburgergracht 201;A3;Nein;photos/entrance-0004.jpg;Ja;4.9197475;52.3696683;Bestand KMZ;Google My Maps
+344;Wittenburgergracht 225;A3;Nein;photos/entrance-0344.jpg;Ja;4.9199326;52.3696533;Bestand KMZ;Google My Maps
+345;Kerkstraat 164;A4;Nein;photos/entrance-0345.jpg;Ja;4.8893751;52.3632098;Bestand KMZ;Google My Maps
+346;Kerkstraat 202;B3;Nein;photos/entrance-0346.jpg;Ja;4.8905827;52.363061;Bestand KMZ;Google My Maps
+347;Sassenheimstraat 23;B1;Ja;photos/entrance-0347.jpg;Ja;4.848416;52.347875;adressnah;Gebaeude GPS, Sassenheimstraat 23H
+348;Isaac Titsinghkade 203;B1;Ja;photos/entrance-0348.jpg;Ja;4.930565;52.37253;ungefaehr_pruefen;Interpolation zwischen Isaac Titsinghkade 175 und 225
+349;Sloterkade 161T;B4;Ja;photos/entrance-0349.jpg;Ja;4.851544;52.350101;adressnah;gleicher Gebaeudekomplex Sloterkade 161F
+350;Marnixstraat 352;C1;Ja;photos/entrance-0350.jpg;Ja;4.879539;52.366321;adressnah;gleicher Gebaeudekomplex Marnixstraat 352-3
+351;Postjeskade 71B;C4;Ja;photos/entrance-0351.jpg;Ja;4.85224;52.363155;ungefaehr_pruefen;Nachbaradresse Postjeskade 69B
+352;Herengracht 355;C3;Ja;photos/entrance-0352.jpg;Ja;4.887141;52.369122;adressnah;GPS Foto Wikicommons Haus Herengracht 355
