@@ -45,8 +45,12 @@ html,body {margin:0;width:100%;height:100%;overflow:hidden;background:var(--pape
 #reset {position:absolute;z-index:3;bottom:32px;left:24px;appearance:none;border:1px solid #d7d7d7;background:rgba(255,255,255,.96);width:38px;height:38px;display:grid;place-items:center;cursor:pointer;}
 #reset svg {width:17px;height:17px;stroke:#111;fill:none;stroke-width:1.7;}
 #reset:hover {background:#f2f2f2;}
-/* Fixed anchor: the popup follows its entrance without flipping its side. */
-.maplibregl-popup.elan-popup {z-index:5;}
+/* Viewport-anchored info card: position is calculated ONCE when opened.
+   It does not move with the map camera. On narrow screens the filter stays in front. */
+.elan-floating-popup {position:fixed;left:0;top:0;z-index:5;visibility:hidden;max-width:calc(100vw - 24px);pointer-events:auto;}
+.elan-floating-popup .maplibregl-popup-content {max-height:calc(100dvh - 24px);overflow-y:auto;overscroll-behavior:contain;}
+.type-filter {z-index:8;}
+
 .elan-popup .maplibregl-popup-content {padding:0;border:1px solid var(--hair);border-radius:0;background:var(--paper);box-shadow:0 8px 32px rgba(0,0,0,.13);overflow:hidden;width:300px;max-width:calc(100vw - 30px);}
 .elan-popup .maplibregl-popup-tip {border-top-color:white;border-bottom-color:white;}
 .elan-card {width:100%;background:#fff;color:var(--ink);}
@@ -278,77 +282,108 @@ function buildPopupContent(feature){
  meta.append(close,address,type,bottom);card.append(area,meta);
  return card;
 }
-// A popup chooses its anchor only once. Dynamic MapLibre anchors otherwise flip
-// when panning or when the photograph finishes loading.
+// Place the whole information card inside the visible map, not just its marker.
+// IMPORTANT: no map.panBy, easeTo, or MapLibre Popup anchoring is used here.
+// Once visible the card stays at its screen position even while the map moves.
 let popupGeneration=0;
+const cardMargin=12;
+
+function limit(value,min,max){return Math.max(min,Math.min(value,max));}
+
+function positionInitialCard(card,feature){
+ const viewport=map.getContainer().getBoundingClientRect();
+ const size=card.getBoundingClientRect();
+ const point=map.project(feature.geometry.coordinates);
+ const markerX=viewport.left+point.x, markerY=viewport.top+point.y;
+ const width=size.width, height=size.height;
+ const left=limit(markerX-width/2,viewport.left+cardMargin,viewport.right-cardMargin-width);
+ const filter=document.getElementById('type-filter').getBoundingClientRect();
+ // When sufficient space exists, keep the entire card BELOW the filter.
+ const belowFilter=Math.max(viewport.top+cardMargin,filter.bottom+8);
+ let topMin=viewport.top+cardMargin;
+ if(belowFilter+height<=viewport.bottom-cardMargin)topMin=belowFilter;
+ const topMax=Math.max(topMin,viewport.bottom-cardMargin-height);
+ const gap=17;
+ const above=markerY-height-gap, below=markerY+gap;
+ let top;
+ if(above>=topMin&&above<=topMax)top=above;
+ else if(below>=topMin&&below<=topMax)top=below;
+ else {
+   // For points near the edges, position the CARD within the screen.
+   // Never recenter the coordinate point or pan the map itself.
+   top=limit(markerY-height/2,topMin,topMax);
+ }
+ card.style.left=`${Math.round(left)}px`;
+ card.style.top=`${Math.round(top)}px`;
+ card.style.visibility='visible';
+}
+
+function keepCardVisibleOnResize(card){
+ // Only viewport resizing/orientation changes may move an open card. Panning
+ // and zooming intentionally do NOT update its screen position.
+ if(!card||!card.isConnected)return;
+ const v=map.getContainer().getBoundingClientRect();
+ const rect=card.getBoundingClientRect();
+ card.style.left=`${Math.round(limit(rect.left,v.left+cardMargin,v.right-cardMargin-rect.width))}px`;
+ card.style.top=`${Math.round(limit(rect.top,v.top+cardMargin,v.bottom-cardMargin-rect.height))}px`;
+}
+
 function selectFeature(feature){
  if(!feature||!map)return;
  const generation=++popupGeneration;
- // Remove a previous popup without clearing the current multi-entrance group.
- const previous=popup;
- popup=null;
- if(previous)previous.remove();
- if(currentId!==null)map.setFeatureState({source:'entrances',id:currentId},{selected:false});
+ if(popup){popup.remove();popup=null;}
+ if(currentId!==null&&map.getSource('entrances'))map.setFeatureState({source:'entrances',id:currentId},{selected:false});
  currentId=Number(feature.id);
  map.setFeatureState({source:'entrances',id:currentId},{selected:true});
  const node=buildPopupContent(feature);
- const projected=map.project(feature.geometry.coordinates);
- // Prefer placing the card below points near the top, and above points lower
- // down. This direction remains fixed for the whole lifetime of this popup.
- const anchor=projected.y<map.getContainer().clientHeight*.43?'top':'bottom';
- const instance=new maplibregl.Popup({
-   closeButton:false,closeOnClick:false,anchor,offset:18,maxWidth:'340px',
-   className:'elan-popup',focusAfterOpen:false,subpixelPositioning:true
- });
- popup=instance;
- instance.on('close',()=>{
-   if(popup!==instance)return; // a replacement popup is already active
-   if(currentId!==null&&map?.getSource('entrances'))map.setFeatureState({source:'entrances',id:currentId},{selected:false});
-   currentId=null;activeGroup=[];groupIndex=0;popup=null;
- });
- instance.setLngLat(feature.geometry.coordinates).setDOMContent(node).addTo(map);
- const popupElement=instance.getElement();
- popupElement.style.visibility='hidden';
- const img=node.querySelector('img');
- let fitted=false;
- const showOnce=()=>{
-   if(fitted||popup!==instance||generation!==popupGeneration)return;
-   fitted=true;
+ const card=document.createElement('div');
+ card.className='elan-popup elan-floating-popup';
+ card.setAttribute('role','dialog');
+ card.setAttribute('aria-modal','false');
+ card.setAttribute('aria-label',`Hauseingang ${feature.properties.name||''}`);
+ const shell=document.createElement('div');
+ shell.className='maplibregl-popup-content';
+ shell.append(node);card.append(shell);
+ document.body.append(card);
+ popup=card;
+ let shown=false;
+ const show=()=>{
+   if(shown||popup!==card||generation!==popupGeneration)return;
+   shown=true;
    requestAnimationFrame(()=>{
-     if(popup!==instance||generation!==popupGeneration)return;
-     // Only on initial opening: nudge the map as little as necessary so the
-     // entire popup fits inside the actual map viewport (also inside iframes).
-     const view=map.getContainer().getBoundingClientRect();
-     const box=popupElement.getBoundingClientRect();
-     const margin=14;
-     let dx=0,dy=0;
-     if(box.left<view.left+margin)dx=view.left+margin-box.left;
-     else if(box.right>view.right-margin)dx=view.right-margin-box.right;
-     if(box.top<view.top+margin)dy=view.top+margin-box.top;
-     else if(box.bottom>view.bottom-margin)dy=view.bottom-margin-box.bottom;
-     if(dx||dy)map.panBy([dx,dy],{duration:0});
-     // Do not pan or recompute the anchor on later mouse, map or window moves.
-     requestAnimationFrame(()=>{
-       if(popup===instance&&generation===popupGeneration)popupElement.style.visibility='visible';
-     });
+     if(popup!==card||generation!==popupGeneration)return;
+     positionInitialCard(card,feature);
    });
  };
- // Images can change popup height. Fit using final dimensions before showing.
- if(!img||img.complete)showOnce();
- else{
-   img.addEventListener('load',showOnce,{once:true});
-   img.addEventListener('error',showOnce,{once:true});
-   // If an image connection stalls, display the image placeholder rather than
-   // leaving the popup invisible indefinitely.
-   window.setTimeout(showOnce,1600);
+ const img=node.querySelector('img');
+ // Wait for the actual photo to determine the card's dimensions. This avoids
+ // showing a clipped photo and a later jump when the image finishes loading.
+ if(!img)show();
+ else if(img.complete){
+   // Cached images may report complete before their load event updates
+   // data-state. Apply the FINAL image layout before measuring.
+   node.querySelector('.elan-image-area').dataset.state=img.naturalWidth>0?'loaded':'error';
+   show();
+ }else{
+   img.addEventListener('load',show,{once:true});
+   img.addEventListener('error',show,{once:true});
+   // A stalled image must not prevent the information card from opening.
+   window.setTimeout(()=>{
+     if(popup!==card||shown)return;
+     node.querySelector('.elan-image-area').dataset.state='error';
+     show();
+   },3000);
  }
 }
 function closePopup(){
  ++popupGeneration;
- if(popup){popup.remove();return;}
+ if(popup){popup.remove();popup=null;}
  if(currentId!==null&&map?.getSource('entrances'))map.setFeatureState({source:'entrances',id:currentId},{selected:false});
  currentId=null;activeGroup=[];groupIndex=0;
 }
+window.addEventListener('resize',()=>{
+ if(popup)requestAnimationFrame(()=>keepCardVisibleOnResize(popup));
+});
 function stepGroup(n){
  if(activeGroup.length<2)return;
  groupIndex=(groupIndex+n+activeGroup.length)%activeGroup.length;
