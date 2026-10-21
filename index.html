@@ -45,7 +45,7 @@ html,body {margin:0;width:100%;height:100%;overflow:hidden;background:var(--pape
 #reset {position:absolute;z-index:3;bottom:32px;left:24px;appearance:none;border:1px solid #d7d7d7;background:rgba(255,255,255,.96);width:38px;height:38px;display:grid;place-items:center;cursor:pointer;}
 #reset svg {width:17px;height:17px;stroke:#111;fill:none;stroke-width:1.7;}
 #reset:hover {background:#f2f2f2;}
-/* Anchored MapLibre popup: MapLibre moves it with the chosen entrance. */
+/* Fixed anchor: the popup follows its entrance without flipping its side. */
 .maplibregl-popup.elan-popup {z-index:5;}
 .elan-popup .maplibregl-popup-content {padding:0;border:1px solid var(--hair);border-radius:0;background:var(--paper);box-shadow:0 8px 32px rgba(0,0,0,.13);overflow:hidden;width:300px;max-width:calc(100vw - 30px);}
 .elan-popup .maplibregl-popup-tip {border-top-color:white;border-bottom-color:white;}
@@ -65,7 +65,10 @@ html,body {margin:0;width:100%;height:100%;overflow:hidden;background:var(--pape
 .elan-close svg {width:16px;height:16px;stroke:currentColor;stroke-width:1.65;fill:none;}
 .elan-close:hover {background:#f3f3f3;}
 .elan-bottom {display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:17px;min-height:18px;}
-.elan-credit {font-size:10px;line-height:1.35;color:#747474;margin:0;}
+.elan-credit {display:inline-flex;align-items:center;gap:5px;font-size:11px;line-height:1.35;color:#666;margin:0;text-decoration:none;white-space:nowrap;}
+.elan-copy-mark {font-size:15px;line-height:1;font-weight:400;color:#333;}
+.elan-credit:hover {color:#111;text-decoration:underline;text-underline-offset:2px;}
+.elan-credit:focus-visible {outline:2px solid #111;outline-offset:3px;}
 .elan-group {display:none;align-items:center;gap:7px;flex-shrink:0;}
 .elan-group[data-visible="true"] {display:flex;}
 .elan-group button {width:25px;height:25px;display:grid;place-items:center;background:#fff;border:1px solid #e1e1e1;cursor:pointer;}
@@ -158,9 +161,11 @@ if(map){
    // Book selection is taken from the book PDF and is independent of typology.
    map.addLayer({id:'book-selection-ring',type:'circle',source:'entrances',
      filter:['==',['get','book_selection'],true],
-     paint:{'circle-radius':['interpolate',['linear'],['zoom'],11,6,13,7.5,15,9.5,18,12],
+     paint:{'circle-radius':['interpolate',['linear'],['zoom'],10.5,3.15,11.5,3.55,12.5,4.35,13.5,5.55,15,7.8,18,12],
        'circle-color':'#ffffff','circle-opacity':0,
-       'circle-stroke-color':'#111111','circle-stroke-width':1.05,'circle-stroke-opacity':1}});
+       'circle-stroke-color':'#111111',
+       'circle-stroke-width':['interpolate',['linear'],['zoom'],10.5,.8,13,1,17,1.1],
+       'circle-stroke-opacity':1}});
    map.addLayer({id:'markers',type:'circle',source:'entrances',paint:{
      'circle-color':'#111111',
      'circle-radius':['interpolate',['linear'],['zoom'],11,2,13,3,15,4.5,18,6.5],
@@ -262,7 +267,7 @@ function buildPopupContent(feature){
  const address=document.createElement('h2');address.className='elan-address';address.textContent=props.name||'–';
  const type=document.createElement('p');type.className='elan-type';type.textContent=props.type||'–';
  const bottom=document.createElement('div');bottom.className='elan-bottom';
- const credit=document.createElement('p');credit.className='elan-credit';credit.textContent='Fotografie: studio elan';
+ const credit=document.createElement('a');credit.className='elan-credit';credit.href='https://studioelan.ch/';credit.target='_blank';credit.rel='noopener noreferrer';credit.setAttribute('aria-label','© studio elan – Website öffnen');const copyMark=document.createElement('span');copyMark.className='elan-copy-mark';copyMark.textContent='©';credit.append(copyMark,document.createTextNode('studio elan'));
  const group=document.createElement('div');group.className='elan-group';group.dataset.visible=String(activeGroup.length>1);
  const prev=document.createElement('button');prev.type='button';prev.setAttribute('aria-label','Vorheriger Eingang');prev.append(makeIcon('prev'));
  const count=document.createElement('span');count.textContent=`${groupIndex+1} / ${activeGroup.length}`;
@@ -273,24 +278,73 @@ function buildPopupContent(feature){
  meta.append(close,address,type,bottom);card.append(area,meta);
  return card;
 }
+// A popup chooses its anchor only once. Dynamic MapLibre anchors otherwise flip
+// when panning or when the photograph finishes loading.
+let popupGeneration=0;
 function selectFeature(feature){
  if(!feature||!map)return;
+ const generation=++popupGeneration;
+ // Remove a previous popup without clearing the current multi-entrance group.
+ const previous=popup;
+ popup=null;
+ if(previous)previous.remove();
  if(currentId!==null)map.setFeatureState({source:'entrances',id:currentId},{selected:false});
  currentId=Number(feature.id);
  map.setFeatureState({source:'entrances',id:currentId},{selected:true});
  const node=buildPopupContent(feature);
- // The MapLibre popup remains anchored to the exact geographical point.
- if(!popup){
-   popup=new maplibregl.Popup({closeButton:false,closeOnClick:false,anchor:undefined,offset:18,maxWidth:'340px',className:'elan-popup',focusAfterOpen:false});
-   popup.on('close',()=>{
-     if(currentId!==null&&map?.getSource('entrances'))map.setFeatureState({source:'entrances',id:currentId},{selected:false});
-     currentId=null;activeGroup=[];groupIndex=0;popup=null;
+ const projected=map.project(feature.geometry.coordinates);
+ // Prefer placing the card below points near the top, and above points lower
+ // down. This direction remains fixed for the whole lifetime of this popup.
+ const anchor=projected.y<map.getContainer().clientHeight*.43?'top':'bottom';
+ const instance=new maplibregl.Popup({
+   closeButton:false,closeOnClick:false,anchor,offset:18,maxWidth:'340px',
+   className:'elan-popup',focusAfterOpen:false,subpixelPositioning:true
+ });
+ popup=instance;
+ instance.on('close',()=>{
+   if(popup!==instance)return; // a replacement popup is already active
+   if(currentId!==null&&map?.getSource('entrances'))map.setFeatureState({source:'entrances',id:currentId},{selected:false});
+   currentId=null;activeGroup=[];groupIndex=0;popup=null;
+ });
+ instance.setLngLat(feature.geometry.coordinates).setDOMContent(node).addTo(map);
+ const popupElement=instance.getElement();
+ popupElement.style.visibility='hidden';
+ const img=node.querySelector('img');
+ let fitted=false;
+ const showOnce=()=>{
+   if(fitted||popup!==instance||generation!==popupGeneration)return;
+   fitted=true;
+   requestAnimationFrame(()=>{
+     if(popup!==instance||generation!==popupGeneration)return;
+     // Only on initial opening: nudge the map as little as necessary so the
+     // entire popup fits inside the actual map viewport (also inside iframes).
+     const view=map.getContainer().getBoundingClientRect();
+     const box=popupElement.getBoundingClientRect();
+     const margin=14;
+     let dx=0,dy=0;
+     if(box.left<view.left+margin)dx=view.left+margin-box.left;
+     else if(box.right>view.right-margin)dx=view.right-margin-box.right;
+     if(box.top<view.top+margin)dy=view.top+margin-box.top;
+     else if(box.bottom>view.bottom-margin)dy=view.bottom-margin-box.bottom;
+     if(dx||dy)map.panBy([dx,dy],{duration:0});
+     // Do not pan or recompute the anchor on later mouse, map or window moves.
+     requestAnimationFrame(()=>{
+       if(popup===instance&&generation===popupGeneration)popupElement.style.visibility='visible';
+     });
    });
+ };
+ // Images can change popup height. Fit using final dimensions before showing.
+ if(!img||img.complete)showOnce();
+ else{
+   img.addEventListener('load',showOnce,{once:true});
+   img.addEventListener('error',showOnce,{once:true});
+   // If an image connection stalls, display the image placeholder rather than
+   // leaving the popup invisible indefinitely.
+   window.setTimeout(showOnce,1600);
  }
- popup.setLngLat(feature.geometry.coordinates).setDOMContent(node);
- if(!popup.isOpen())popup.addTo(map);
 }
 function closePopup(){
+ ++popupGeneration;
  if(popup){popup.remove();return;}
  if(currentId!==null&&map?.getSource('entrances'))map.setFeatureState({source:'entrances',id:currentId},{selected:false});
  currentId=null;activeGroup=[];groupIndex=0;
